@@ -1,27 +1,28 @@
-# Laravel PHP Framework
+# Setting Module
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+[![Latest Version](https://img.shields.io/github/release/asgardcms/setting.svg?style=flat-square)](https://github.com/asgardcms/setting/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Quality Score](https://img.shields.io/scrutinizer/g/asgardcms/setting.svg?style=flat-square)](https://scrutinizer-ci.com/g/asgardcms/setting)
+[![SensioLabs Insight](https://img.shields.io/sensiolabs/i/92d544b4-a3ca-4c2a-9ffd-0741c521cb14.svg)](https://insight.sensiolabs.com/projects/92d544b4-a3ca-4c2a-9ffd-0741c521cb14)
+[![CodeClimate](https://img.shields.io/codeclimate/github/AsgardCms/Setting.svg)](https://codeclimate.com/github/AsgardCms/Setting)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+[![Total Downloads](https://img.shields.io/packagist/dd/asgardcms/setting-module.svg?style=flat-square)](https://packagist.org/packages/asgardcms/setting-module)
+[![Total Downloads](https://img.shields.io/packagist/dm/asgardcms/setting-module.svg?style=flat-square)](https://packagist.org/packages/asgardcms/setting-module)
+[![Total Downloads](https://img.shields.io/packagist/dt/asgardcms/setting-module.svg?style=flat-square)](https://packagist.org/packages/asgardcms/setting-module)
+[![Slack](http://slack.asgardcms.com/badge.svg)](http://slack.asgardcms.com/)
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-## Official Documentation
+| Branch | Travis-ci |
+| ---------------- | --------------- |
+| master  | [![Build Status](https://travis-ci.org/AsgardCms/Setting.svg?branch=master)](https://travis-ci.org/AsgardCms/Setting)  |
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## Resources
 
-## Contributing
+- [Contribute to AsgardCMS](https://asgardcms.com/en/docs/getting-started/contributing)
+- [License](LICENSE.md)
+- [Documentation](http://asgardcms.com/docs/setting-module/adding-settings)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
 
-## Security Vulnerabilities
+## Info
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+All AsgardCMS modules respect [Semantic Versioning](http://semver.org/).
