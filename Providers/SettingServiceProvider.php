@@ -99,8 +99,20 @@ class SettingServiceProvider extends ServiceProvider
         if (app()->environment() === 'testing') {
             return;
         }
-        $this->app['blade.compiler']->directive('setting', function ($value) {
-            return "<?php echo SettingDirective::show([$value]); ?>";
+        $this->app['blade.compiler']->directive('setting', function ($value, $locale, $default) {
+            return "<?php echo SettingDirective::show([$value, $locale, $default]); ?>";
+        });
+        $this->app['blade.compiler']->directive('hasSetting', function ($value, $locale) {
+            return "<?php if ( SettingDirective::has([$value, $locale]) ): ?>";
+        });
+        $this->app['blade.compiler']->directive('endHasSetting', function ($value) {
+            return "<?php endif; ?>";
+        });
+        $this->app['blade.compiler']->directive('hasSettings', function ($value, $locale) {
+            return "<?php if (SettingDirective::hasMultiple($value, $locale)) : ?>";
+        });
+        $this->app['blade.compiler']->directive('endHasSettings', function ($value) {
+            return "<?php endif; ?>";
         });
     }
 }
