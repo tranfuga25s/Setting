@@ -36,4 +36,22 @@ final class SettingDirective
         $this->locale = array_get($arguments, 1);
         $this->default = array_get($arguments, 2);
     }
+    
+    
+
+    public function has(array $arguments)
+    {
+      $this->extractArguments($arguments);
+      return Settings::has($this->settingName, $this->locale);
+    }
+
+    public function hasMultiple(array $settings, $locale)
+    {
+      $this->locale = $locale;
+      $conditions = false;
+      foreach ($settings as $setting) {
+        $conditions = $conditions && Settings::has($setting, $locale);
+      }
+      return $condition;
+    }
 }
