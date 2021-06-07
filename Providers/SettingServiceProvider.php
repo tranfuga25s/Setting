@@ -94,13 +94,34 @@ class SettingServiceProvider extends ServiceProvider
         );
     }
 
-    private function registerBladeTags()
+        private function registerBladeTags()
     {
         if (app()->environment() === 'testing') {
             return;
         }
-        $this->app['blade.compiler']->directive('setting', function ($value) {
-            return "<?php echo SettingDirective::show([$value]); ?>";
+        $this->app['blade.compiler']->directive('setting', function ($value, $locale = null, $default = null) {
+            $string = "<?php echo SettingDirective::show([";
+            $string .= $value;
+            if (!is_null($locale)) {
+              $string .= ", ".$locale;
+            }
+            if (!is_null($default)) {
+              $string .= ", ".$default;
+            }
+            $string .= " ]); ?>";
+            return $string;
+        });
+        $this->app['blade.compiler']->directive('hasSetting', function ($value, $locale = null) {
+            return "<?php if ( SettingDirective::has([$value, $locale]) ): ?>";
+        });
+        $this->app['blade.compiler']->directive('endHasSetting', function () {
+            return "<?php endif; ?>";
+        });
+        $this->app['blade.compiler']->directive('hasSettings', function ($value, $locale = null) {
+            return "<?php if (SettingDirective::hasMultiple($value, $locale)) : ?>";
+        });
+        $this->app['blade.compiler']->directive('endHasSettings', function () {
+            return "<?php endif; ?>";
         });
     }
 }
